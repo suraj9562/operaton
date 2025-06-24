@@ -16,7 +16,7 @@
  */
 package org.operaton.bpm.util;
 
-import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
+import com.fasterxml.jackson.jakarta.rs.json.JacksonJsonProvider;
 import jakarta.ws.rs.WebApplicationException;
 import jakarta.ws.rs.client.ClientBuilder;
 import jakarta.ws.rs.core.MediaType;
@@ -41,7 +41,7 @@ public class TestUtil {
 
     // Create Jersey client and register Jackson for POJO mapping
     ClientConfig clientConfig = new ClientConfig();
-    clientConfig.register(JacksonJaxbJsonProvider.class);  // Register Jackson for POJO mapping
+    clientConfig.register(JacksonJsonProvider.class);  // Register Jackson for POJO mapping
 
     client = ClientBuilder.newClient(clientConfig);
   }

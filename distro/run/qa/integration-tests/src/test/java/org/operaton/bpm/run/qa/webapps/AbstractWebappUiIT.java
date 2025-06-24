@@ -61,7 +61,7 @@ public abstract class AbstractWebappUiIT extends AbstractWebIT {
     ChromeDriverService chromeDriverService = new ChromeDriverService.Builder()
         .withVerbose(true)
         .usingAnyFreePort()
-        .usingDriverExecutable(chromeDriver)
+        //.usingDriverExecutable(chromeDriver)
         .build();
 
     ChromeOptions chromeOptions = new ChromeOptions()

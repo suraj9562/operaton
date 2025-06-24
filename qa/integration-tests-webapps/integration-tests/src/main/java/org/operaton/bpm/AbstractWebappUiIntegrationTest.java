@@ -55,7 +55,7 @@ public class AbstractWebappUiIntegrationTest extends AbstractWebIntegrationTest 
     ChromeDriverService chromeDriverService = new ChromeDriverService.Builder()
         .withVerbose(true)
         .usingAnyFreePort()
-        .usingDriverExecutable(chromeDriver)
+        //.usingDriverExecutable(chromeDriver)
         .build();
 
     ChromeOptions chromeOptions = new ChromeOptions()

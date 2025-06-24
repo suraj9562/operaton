@@ -16,7 +16,7 @@
  */
 package org.operaton.bpm;
 
-import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
+import com.fasterxml.jackson.jakarta.rs.json.JacksonJsonProvider;
 import jakarta.ws.rs.client.Client;
 import jakarta.ws.rs.client.ClientBuilder;
 import jakarta.ws.rs.client.Entity;
@@ -90,7 +90,7 @@ public abstract class AbstractWebIntegrationTest {
     LOGGER.info("Connecting to application " + appBasePath);
 
     var clientConfig = new ClientConfig();
-    clientConfig.register(JacksonJaxbJsonProvider.class);  // Register Jackson for POJO mapping
+    clientConfig.register(JacksonJsonProvider.class);  // Register Jackson for POJO mapping
 
     client = ClientBuilder.newClient(clientConfig);
   }
